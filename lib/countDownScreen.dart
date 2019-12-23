@@ -49,6 +49,7 @@ class _CountDownState extends State<CountDown> {
             SizedBox(
               height: 20,
             ),
+            //access digitClock content at digitClock.dart
             DigitClock(scaffoldKey: _scaffoldKey),
             buildSpace(),
           ],

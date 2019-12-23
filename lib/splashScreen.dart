@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'constants.dart';
 import 'countDownScreen.dart';
@@ -7,33 +8,48 @@ import 'countDownScreen.dart';
 class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            SvgPicture.asset(
-              'images/bell.svg',
-              height: 200,
+    return Container(
+      color: Color(0xFFFCF0E5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Image.asset(
+            'images/cat2.gif',
+            height: 200,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Xmas CountDown',
+            style: kXmasTextStyle,
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          RaisedButton(
+            color: Colors.red[300],
+            highlightColor: Colors.green,
+            child: Text(
+              'countdown Route',
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Xmas CountDown',
-              style: kXmasTextStyle,
-              textAlign: TextAlign.center,
-            ),
-            RaisedButton(
-              child: Text('countdown Route'),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CountDownScreen()));
-              },
-            )
-          ],
-        ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => CountDownScreen()));
+            },
+          ),
+          SizedBox(
+            height: 100,
+          ),
+          Text(
+            'by: Joseph Githumbi 😜',
+            style: TextStyle(fontStyle: FontStyle.italic),
+          )
+        ],
       ),
     );
   }

@@ -14,7 +14,7 @@ class DigitClock extends StatelessWidget {
   Widget build(BuildContext context) {
     return SlideCountdownClock(
 //              duration: Duration(days: 1, minutes: 1000000),
-      duration: Duration(days: 1),
+      duration: Duration(seconds: 5),
       slideDirection: SlideDirection.Down,
       separator: ":",
       textStyle: TextStyle(
@@ -22,13 +22,15 @@ class DigitClock extends StatelessWidget {
         fontWeight: FontWeight.bold,
       ),
       onDone: () {
-        _scaffoldKey.currentState
-            .showSnackBar(SnackBar(content: Text('Clock 1 finished')));
+        _scaffoldKey.currentState.showSnackBar(SnackBar(
+          content: Text('Clock 1 finished'),
+          backgroundColor: Colors.green,
+        ));
       },
     );
   }
 }
 
 Widget buildSpace() {
-  return SizedBox(height: 50);
+  return SizedBox(height: 150);
 }
