@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:slide_countdown_clock/slide_countdown_clock.dart';
+import 'package:flutter/rendering.dart';
+import 'package:xmas_countdown/countdownContent/digitClock.dart';
 
 class CountDownScreen extends StatelessWidget {
   @override
@@ -9,58 +10,50 @@ class CountDownScreen extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: CountDown(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class CountDown extends StatefulWidget {
+  CountDown({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _CountDownState createState() => _CountDownState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CountDownState extends State<CountDown> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
-  Duration _duration = Duration(seconds: 1000000);
+//  Duration _duration = Duration(seconds: 1000000);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(title: Text(widget.title)),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            _buildSpace(),
-            Text('Slide direction Down'),
-            SlideCountdownClock(
-              duration: _duration,
-              slideDirection: SlideDirection.Down,
-              separator: ":",
-              textStyle: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            buildSpace(),
+            Text(
+              'And the CountDown Begins',
+              style: TextStyle(
+                fontSize: 30,
               ),
-              onDone: () {
-                _scaffoldKey.currentState
-                    .showSnackBar(SnackBar(content: Text('Clock 1 finished')));
-              },
+              textAlign: TextAlign.center,
             ),
-            _buildSpace(),
+            SizedBox(
+              height: 20,
+            ),
+            DigitClock(scaffoldKey: _scaffoldKey),
+            buildSpace(),
           ],
         ),
       ),
     );
-  }
-
-  Widget _buildSpace() {
-    return SizedBox(height: 50);
   }
 }

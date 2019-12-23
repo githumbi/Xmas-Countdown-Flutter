@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-TextStyle xmasTextStyle = TextStyle(
+TextStyle kXmasTextStyle = TextStyle(
   fontSize: 50,
   fontWeight: FontWeight.bold,
 );

@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
             ),
             Text(
               'Xmas CountDown',
-              style: xmasTextStyle,
+              style: kXmasTextStyle,
               textAlign: TextAlign.center,
             ),
             RaisedButton(
