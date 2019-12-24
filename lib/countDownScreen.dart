@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:xmas_countdown/countdownContent/digitClock.dart';
+import 'package:xmas_countdown_flutter/countdownContent/digitClock.dart';
 
 class CountDownScreen extends StatelessWidget {
   @override
