@@ -29,7 +29,7 @@ class SplashScreen extends StatelessWidget {
             color: Colors.red[300],
             highlightColor: Colors.green,
             child: Text(
-              'countdown Route',
+              'Click to CountDown',
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -41,9 +41,6 @@ class SplashScreen extends StatelessWidget {
           ),
           SizedBox(
             height: 10,
-          ),
-          Text(
-            'by: Joseph Githumbi 😜',
           ),
         ],
       ),

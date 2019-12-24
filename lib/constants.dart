@@ -17,3 +17,9 @@ TextStyle kXmasStartText = TextStyle(
     fontWeight: FontWeight.bold,
     fontFamily: 'courgette-Regular',
     color: Colors.black);
+
+TextStyle kXmasNewYear = TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.bold,
+    fontFamily: 'courgette-Regular',
+    color: Colors.white);
