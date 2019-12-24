@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:xmas_countdown_flutter/countdownContent/digitClock.dart';
+import 'package:xmas_countdown_flutter/constants.dart';
 
 class CountDownScreen extends StatelessWidget {
   @override
@@ -40,10 +41,8 @@ class _CountDownState extends State<CountDown> {
           children: <Widget>[
             buildSpace(),
             Text(
-              'And the CountDown Begins',
-              style: TextStyle(
-                fontSize: 30,
-              ),
+              'Starts in ',
+              style: kXmasStartText,
               textAlign: TextAlign.center,
             ),
             SizedBox(

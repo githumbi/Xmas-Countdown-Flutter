@@ -17,11 +17,8 @@ class SplashScreen extends StatelessWidget {
             'images/xmascat.gif',
             height: 200,
           ),
-          SizedBox(
-            height: 20,
-          ),
           Text(
-            'Xmas CountDow',
+            'Xmas CountDown',
             style: kXmasTextStyle,
             textAlign: TextAlign.center,
           ),
@@ -47,7 +44,7 @@ class SplashScreen extends StatelessWidget {
           ),
           Text(
             'by: Joseph Githumbi 😜',
-          )
+          ),
         ],
       ),
     );
