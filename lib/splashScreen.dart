@@ -14,7 +14,7 @@ class SplashScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Image.asset(
-            'images/cat2.gif',
+            'images/xmascat.gif',
             height: 200,
           ),
           SizedBox(
@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(
-            height: 50,
+            height: 10,
           ),
           RaisedButton(
             color: Colors.red[300],
@@ -43,7 +43,7 @@ class SplashScreen extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: 100,
+            height: 10,
           ),
           Text(
             'by: Joseph Githumbi 😜',
